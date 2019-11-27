@@ -8,4 +8,5 @@ Testing application chat based on spring boot, websocket, maven
     
 ### Info 
 
+For usage bot type "#bot message" 
 Simple test application based on Spring Boot , WebSocket, Maven, Tomcat  

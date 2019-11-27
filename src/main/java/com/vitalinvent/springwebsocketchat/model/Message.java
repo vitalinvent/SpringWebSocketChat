@@ -30,6 +30,6 @@ public class Message {
     }
 
     public enum Type {
-        CHAT, LEAVE, JOIN
+        CHAT, LEAVE, JOIN , BOT_MESSAGE
     }
 }
