@@ -9,4 +9,5 @@ Testing application chat based on spring boot, websocket, maven
 ### Info 
 
 For usage bot type "#bot {message}" default login: **user** password: **123**
+
 Simple test application based on Spring Boot , WebSocket, Maven, Tomcat  
