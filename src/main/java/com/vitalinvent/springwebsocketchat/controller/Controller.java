@@ -7,8 +7,13 @@ import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.messaging.simp.SimpMessageHeaderAccessor;
+import org.xml.sax.SAXException;
 
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
+import java.net.URL;
 import java.util.Random;
 
 @org.springframework.stereotype.Controller
@@ -34,25 +39,44 @@ public class Controller {
     @SendTo("/topic/public")
     public Message sendMessageToBot(@Payload Message message) {
         message.setAuthor("bot:");
-
+        // FIXME: 27.11.2019 Here can add command to bot
         boolean getAgain = true;
         Document doc = null;
         String url = null;
         String description = null;
+        org.w3c.dom.Document docXml = null;
 
-        while (getAgain) {// FIXME: 27.11.2019 make some method for fast articles number search or getting
+//        DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+//        DocumentBuilder db = null;
+//        try {
+//            db = dbf.newDocumentBuilder();
+//        } catch (ParserConfigurationException e) {
+//            e.printStackTrace();
+//        }
+//        try {
+//            docXml = db.parse(new URL("https://habr.com/ru/rss/all/all/").openStream());
+//        } catch (SAXException e) {
+//            e.printStackTrace();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+
+        do {// FIXME: 27.11.2019 make some method for fast articles number search or getting
             url = "https://habr.com/en/post/" + new Random().nextInt(500000) + "/";
             try {
                 doc = Jsoup.connect(url).get();
                 description = doc.select("meta[name=description]").get(0).attr("content");
             } catch (IOException e) {
-                e.printStackTrace();
                 getAgain = true;
             }
-            getAgain = false;
-        }
+            if (description == null) {
+                getAgain = true;
+            } else {
+                getAgain = false;
+            }
+        } while (getAgain);
 
-        message.setContent("<h4>" + getLeftString(description, 30) + "...</h4><a href=\"" + url + ">" + url + "</a>");
+        message.setContent("<b>" + getLeftString(description, 25) + "...</b><a target=\"_blank\" rel=\"noopener noreferrer\"  href=\"" + url + "\">" + url + "</a>");
         return message;
     }
 
@@ -63,7 +87,7 @@ public class Controller {
             return st;
         }
 
-        return st.substring((stringlength - length));
+        return st.substring(0,(stringlength - length));
     }
 
 }

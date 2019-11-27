@@ -98,8 +98,7 @@ function onMessageReceived(payload) {
         messageElement.appendChild(usernameElement);
 
         var textElement = document.createElement('p');
-        var messageText = document.appendChild(message.content);
-        textElement.appendChild(messageText);
+        textElement.innerHTML = message.content;
 
         messageElement.appendChild(textElement);
 
