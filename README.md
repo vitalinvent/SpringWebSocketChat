@@ -1,2 +1,2 @@
-# Spring-Boot-WebSocket
-Building a chat application using Spring Boot and Web Socket
+# SpringWebSocketChat
+Testting application chat based on spring boot, websocket, maven
