@@ -1,2 +1,11 @@
-# Spring-Boot-WebSocket
-Building a chat application using Spring Boot and Web Socket
+# SpringWebSocketChat
+
+Testting application chat based on spring boot, websocket, maven
+
+## Using
+ 
+    git clone https://github.com/vitalinvent/SpringWebSocketChat.git
+    
+### Info 
+
+Simple test application based on Spring Boot , WebSocket, Maven, Tomcat  
