@@ -1,6 +1,6 @@
 # SpringWebSocketChat
 
-Testting application chat based on spring boot, websocket, maven
+Testing application chat based on spring boot, websocket, maven
 
 ## Using
  
