@@ -11,7 +11,7 @@ public class Configuration implements WebSocketMessageBrokerConfigurer {
 
     @Override
     public void registerStompEndpoints(StompEndpointRegistry registry) {
-        registry.addEndpoint("/SpringApplicationChat").withSockJS();
+        registry.addEndpoint("/chat").withSockJS();
     }
 
     @Override

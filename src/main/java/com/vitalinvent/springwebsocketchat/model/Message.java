@@ -29,7 +29,7 @@ public class Message {
         this.type = type;
     }
 
-    public  enum Type{
-        CHAT,LEAVE,JOIN
+    public enum Type {
+        CHAT, LEAVE, JOIN
     }
 }

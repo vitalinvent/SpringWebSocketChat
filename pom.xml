@@ -9,10 +9,10 @@
         <version>2.1.2.RELEASE</version>
         <relativePath /> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.javatechie</groupId>
-    <artifactId>spring-boot-websocket</artifactId>
+    <groupId>com.vitalinvent</groupId>
+    <artifactId>SpringWebSocketChat</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>spring-boot-websocket</name>
+    <name>SpringWebSocketChat</name>
     <description>Develop a chat application using spring boot and web socket</description>
 
     <properties>

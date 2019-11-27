@@ -34,7 +34,7 @@ body:before {
     position: absolute;
     top: 0;
     left: 0;
-    background: 18.jpg;
+    background: backgrnd.jpg;
     content: "";
     z-index: 0;
 }
@@ -53,7 +53,7 @@ body:before {
     width: 100%;
     min-height: 38px;
     font-size: 15px;
-    border: 1px solid #c8c8c8;
+    border: 1px solid #85c875;
 }
 
 .form-group {
@@ -75,7 +75,7 @@ h1 {
 }
 
 a {
-    color: #128ff2;
+    color: #76f2d5;
 }
 
 button {
@@ -94,7 +94,7 @@ button {
 }
 
 button.default {
-    background-color: #e8e8e8;
+    background-color: #c1e8c7;
     color: #333;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12);
 }
@@ -102,13 +102,13 @@ button.default {
 button.primary {
     background-color: #25be38;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12);
-    color: #fff;
+    color: #bfffbe;
 }
 
 button.accent {
-    background-color: #1778dd;
+    background-color: #477d17;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12);
-    color: #fff;
+    color: #d1ffd9;
 }
 
 #username-page {
@@ -116,7 +116,7 @@ button.accent {
 }
 
 .username-page-container {
-    background: #fff;
+    background: #c4ffd0;
     box-shadow: 0 1px 11px rgba(0, 0, 0, 0.27);
     border-radius: 2px;
     width: 100%;
@@ -149,7 +149,7 @@ button.accent {
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
-    background-color: #fff;
+    background-color: #c7ffcc;
     box-shadow: 0 1px 11px rgba(0, 0, 0, 0.27);
     margin-top: 30px;
     height: calc(100% - 60px);
@@ -159,7 +159,7 @@ button.accent {
 
 #chat-page ul {
     list-style-type: none;
-    background-color: #FFF;
+    background-color: #d2ffdd;
     margin: 0;
     overflow: auto;
     overflow-y: scroll;
@@ -175,7 +175,7 @@ button.accent {
     line-height: 1.5rem;
     padding: 10px 20px;
     margin: 0;
-    border-bottom: 1px solid #f4f4f4;
+    border-bottom: 1px solid #b9f4bd;
 }
 
 #chat-page ul li p {
@@ -209,7 +209,7 @@ button.accent {
     vertical-align: middle;
     font-size: 18px;
     line-height: 42px;
-    color: #fff;
+    color: #d7ffd9;
     text-align: center;
     border-radius: 50%;
     font-style: normal;
@@ -240,7 +240,7 @@ button.accent {
 .chat-header {
     text-align: center;
     padding: 15px;
-    border-bottom: 1px solid #ececec;
+    border-bottom: 1px solid #c7ecd0;
 }
 
 .chat-header h2 {
